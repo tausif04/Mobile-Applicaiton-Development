@@ -6,7 +6,6 @@ void main() {
 
 final List<String> notes = [];
 
-/// ROOT OF THE APPLICATION
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -158,10 +157,15 @@ class HomePage extends StatelessWidget {
                                   height: 56,
                                   width: 400,
                                   child: ElevatedButton(
-                                    onPressed: () {Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (_) => const CreateNotePage()),
-                                    );},
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (_) =>
+                                              const CreateNotePage(),
+                                        ),
+                                      );
+                                    },
                                     child: const Text('Create a Study Note'),
                                   ),
                                 ),
@@ -170,10 +174,13 @@ class HomePage extends StatelessWidget {
                                   width: 400,
                                   child: ElevatedButton(
                                     onPressed: () {
-                                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(builder: (_) => const CreateNotePage()),
-                                  );
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (_) =>
+                                              const CreateNotePage(),
+                                        ),
+                                      );
                                     },
                                     child: const Text('Create a Personal Note'),
                                   ),
@@ -191,10 +198,14 @@ class HomePage extends StatelessWidget {
                         width: double.infinity,
                         height: 56,
                         child: OutlinedButton(
-                          onPressed: () {Navigator.push(
-                                    context,
-                                    MaterialPageRoute(builder: (_) => const ViewNotesPage()),
-                                  );},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => const ViewNotesPage(),
+                              ),
+                            );
+                          },
                           child: const Text('View My Notes'),
                         ),
                       ),
@@ -218,9 +229,6 @@ class HomePage extends StatelessWidget {
   }
 }
 
-/// =========================
-/// CREATE NOTE PAGE
-/// =========================
 class CreateNotePage extends StatefulWidget {
   const CreateNotePage({super.key});
 
@@ -270,9 +278,6 @@ class _CreateNotePageState extends State<CreateNotePage> {
   }
 }
 
-/// =========================
-/// VIEW NOTES PAGE
-/// =========================
 class ViewNotesPage extends StatefulWidget {
   const ViewNotesPage({super.key});
 
